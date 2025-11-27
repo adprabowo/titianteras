@@ -18,6 +18,10 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
         }
+        /* Custom Fade Transition for Slider */
+        .fade-enter-active, .fade-leave-active {
+            transition: opacity 1s ease-in-out;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
@@ -128,7 +132,7 @@
                     <div class="flex items-center gap-5 pt-6 border-t border-slate-100">
                         <div>
                             <h4 class="text-xl font-bold text-slate-900">Hendri Yulianto, S.Pd</h4> 
-                            <p class="text-sm text-slate-500 font-medium uppercase tracking-wide">Kepala SMAN Titian Teras H.Abdurrahman Sayoeti</p>
+                            <p class="text-sm text-slate-500 font-medium uppercase tracking-wide">Kepala SMAN Titian Teras H. Abdurrahman Sayoeti</p>
                         </div>
                     </div>
                 </div>
@@ -136,47 +140,34 @@
         </div>
     </section>
 
-    <section class="py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Kenapa Titian Teras?</h2>
-                <div class="w-20 h-1.5 bg-blue-900 mx-auto rounded-full"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition duration-300 border border-slate-100 group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -mr-16 -mt-16 transition-all group-hover:bg-blue-900 group-hover:scale-150"></div>
-                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-900 transition duration-300 relative z-10">
-                        <svg class="w-7 h-7 text-blue-900 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3 relative z-10">Kurikulum Terintegrasi</h3>
-                    <p class="text-slate-600 leading-relaxed text-sm relative z-10">Menggabungkan Kurikulum Nasional dengan penguatan sains dan kepemimpinan untuk mencetak intelektual berkarakter.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition duration-300 border border-slate-100 group relative overflow-hidden">
-                     <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -mr-16 -mt-16 transition-all group-hover:bg-blue-900 group-hover:scale-150"></div>
-                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-900 transition duration-300 relative z-10">
-                        <svg class="w-7 h-7 text-blue-900 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3 relative z-10">Kehidupan Asrama</h3>
-                    <p class="text-slate-600 leading-relaxed text-sm relative z-10">Lingkungan asrama yang kondusif, membentuk kemandirian, disiplin tinggi, dan solidaritas persaudaraan yang kuat (Korsa).</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition duration-300 border border-slate-100 group relative overflow-hidden">
-                     <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -mr-16 -mt-16 transition-all group-hover:bg-blue-900 group-hover:scale-150"></div>
-                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-900 transition duration-300 relative z-10">
-                        <svg class="w-7 h-7 text-blue-900 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3 relative z-10">Fasilitas Modern</h3>
-                    <p class="text-slate-600 leading-relaxed text-sm relative z-10">Laboratorium sains lengkap, sarana olahraga standar nasional, asrama nyaman, dan perpustakaan digital.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-slate-50 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2">
-                <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
-                    <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Students Studying" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    <div class="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition"></div>
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl h-[400px] group bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Prestasi 1" 
+                         class="slider-image absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000 ease-in-out">
+                    
+                    <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Prestasi 2" 
+                         class="slider-image absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 ease-in-out">
+                    
+                    <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Prestasi 3" 
+                         class="slider-image absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 ease-in-out">
+                    
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Prestasi 4" 
+                         class="slider-image absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 ease-in-out">
+                         
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
+                    
+                    <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2 z-10" id="slider-dots">
+                        <div class="w-2 h-2 rounded-full bg-white transition-all duration-300 w-6"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all duration-300"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all duration-300"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all duration-300"></div>
+                    </div>
                 </div>
             </div>
             <div class="w-full md:w-1/2">
@@ -195,155 +186,4 @@
                         Pertukaran Pelajar Internasional
                     </li>
                     <li class="flex items-center text-slate-700">
-                        <svg class="w-5 h-5 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        Lulusan diterima di Universitas Top Dunia
-                    </li>
-                </ul>
-                <a href="#" class="text-blue-900 font-bold hover:text-blue-700 flex items-center group">
-                    Lihat Galeri Prestasi 
-                    <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-end mb-12">
-                <div>
-                    <h2 class="text-3xl font-bold text-slate-900">Berita Terbaru</h2>
-                    <p class="text-slate-500 mt-2">Kabar terkini dari kampus Pijoan.</p>
-                </div>
-                <a href="#" class="hidden md:flex items-center text-blue-900 font-bold hover:underline">
-                    Lihat Semua Berita
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </a>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition group cursor-pointer border border-slate-100">
-                    <div class="h-48 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="News">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs font-bold text-blue-600 uppercase bg-blue-50 px-2 py-1 rounded">Akademik</span>
-                            <span class="text-xs text-slate-400">27 Nov 2025</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-900 leading-snug">Penerimaan Siswa Baru Jalur Prestasi 2025 Segera Dibuka</h3>
-                        <p class="text-slate-500 text-sm line-clamp-2">Informasi lengkap mengenai jadwal, persyaratan, dan mekanisme seleksi penerimaan siswa baru...</p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition group cursor-pointer border border-slate-100">
-                    <div class="h-48 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="News">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs font-bold text-orange-600 uppercase bg-orange-50 px-2 py-1 rounded">Event</span>
-                            <span class="text-xs text-slate-400">20 Nov 2025</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-900 leading-snug">Titian Teras Expo: Menampilkan Karya Teknologi Tepat Guna</h3>
-                        <p class="text-slate-500 text-sm line-clamp-2">Siswa kelas XII menampilkan inovasi teknologi tepat guna untuk masyarakat pedesaan...</p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition group cursor-pointer border border-slate-100">
-                    <div class="h-48 overflow-hidden relative">
-                         <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="News">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs font-bold text-green-600 uppercase bg-green-50 px-2 py-1 rounded">Prestasi</span>
-                            <span class="text-xs text-slate-400">15 Nov 2025</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-900 leading-snug">Tim Debat Bahasa Inggris Raih Juara 1 Tingkat Provinsi</h3>
-                        <p class="text-slate-500 text-sm line-clamp-2">Selamat kepada tim debat yang akan mewakili Jambi di tingkat Nasional bulan depan...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="py-20 bg-blue-900 text-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-white/5 blur-3xl"></div>
-        
-        <div class="max-w-4xl mx-auto text-center px-4 relative z-10">
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">Siap Menjadi Bagian dari Keluarga Besar Titian Teras?</h2>
-            <p class="text-blue-100 text-lg mb-10">Bergabunglah bersama kami untuk masa depan yang gemilang. Pendaftaran Tahun Ajaran 2025/2026 segera dibuka.</p>
-            <a href="#" class="inline-block bg-white text-blue-900 font-bold py-4 px-10 rounded-full hover:bg-slate-100 transition shadow-lg transform hover:-translate-y-1">
-                Informasi Pendaftaran
-            </a>
-        </div>
-    </section>
-
-    <footer class="bg-slate-900 text-slate-400 pt-20 pb-10 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <div class="col-span-1 md:col-span-1">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <div class="h-8 w-8 bg-blue-600 rounded flex items-center justify-center text-white font-bold">TT</div>
-                        <span class="font-bold text-white text-lg">SMAN Titian Teras</span>
-                    </div>
-                    <p class="text-sm leading-relaxed mb-6">
-                        Mewujudkan generasi pemimpin yang cerdas, berkarakter, dan berdaya saing global melalui pendidikan berkualitas.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition text-white">IG</a>
-                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition text-white">FB</a>
-                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition text-white">YT</a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-white font-bold mb-6">Tautan Cepat</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="#" class="hover:text-white transition flex items-center"><span class="mr-2">›</span> Profil Sekolah</a></li>
-                        <li><a href="#" class="hover:text-white transition flex items-center"><span class="mr-2">›</span> GTK</a></li>
-                        <li><a href="#" class="hover:text-white transition flex items-center"><span class="mr-2">›</span> Sarana Prasarana</a></li>
-                        <li><a href="#" class="hover:text-white transition flex items-center"><span class="mr-2">›</span> Alumni</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-white font-bold mb-6">Informasi Publik</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="#" class="hover:text-white transition flex items-center"><span class="mr-2">›</span> PPDB 2025</a></li>
-                        <li><a href="#" class="hover:text-white transition flex items-center"><span class="mr-2">›</span> Pengumuman</a></li>
-                        <li><a href="#" class="hover:text-white transition flex items-center"><span class="mr-2">›</span> Agenda Sekolah</a></li>
-                        <li><a href="#" class="hover:text-white transition flex items-center"><span class="mr-2">›</span> E-Learning</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-white font-bold mb-6">Hubungi Kami</h4>
-                    <ul class="space-y-4 text-sm">
-                        <li class="flex items-start">
-                            <span class="mr-3 mt-1 text-blue-500">📍</span> 
-                            Jl. Lintas Jambi - Muara Bulian Km. 21, Pijoan, Jambi Luar Kota.
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 mt-1 text-blue-500">📞</span> (0741) 755XXXX
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 mt-1 text-blue-500">📧</span> info@smantitianteras.sch.id
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
-                <p>&copy; 2025 SMAN Titian Teras H. Abdurrahman Sayoeti. Created with ❤️.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-white">Privacy Policy</a>
-                    <a href="#" class="hover:text-white">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+                        <svg class="w-5 h-5 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-
